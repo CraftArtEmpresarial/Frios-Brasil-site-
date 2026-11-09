@@ -1,0 +1,18 @@
+FRIOS BRASIL — SITE
+
+Arquivos:
+- index.html: estrutura do site
+- style.css: aparência, cores e animações
+- script.js: catálogo, filtros e formulário de contato
+- images/: coloque aqui fotos reais da loja e dos produtos, se desejar.
+
+Como abrir:
+1. Extraia todos os arquivos mantendo a mesma estrutura de pastas.
+2. Abra o arquivo index.html no navegador.
+3. Para editar, abra a pasta no VS Code.
+
+Observações:
+- O catálogo atual é demonstrativo; confirme produtos, preços e estoque com a loja.
+- Os links de WhatsApp e Instagram estão configurados com os dados fornecidos.
+- O formulário abre o WhatsApp com a mensagem preenchida; não armazena dados.
+- As imagens externas usadas na página precisam de internet para carregar.
