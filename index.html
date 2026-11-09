@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b2d">
+<title>Frios Brasil | Qualidade e variedade em Hortolândia</title>
+<meta name="description" content="Conheça a Frios Brasil em Hortolândia. Confira categorias de produtos e fale com a equipe pelo WhatsApp.">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>📍 Jardim Everest · Hortolândia – SP</span><span>Atendimento e pedidos pelo WhatsApp</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio"><span class="logo">❄</span><span>FRIOS BRASIL</span></a>
+<button class="menu" aria-label="Abrir menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+<nav class="links"><a href="#inicio">Início</a><a href="#catalogo">Catálogo</a><a href="#empresa">A empresa</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></nav>
+<a class="navcta" href="https://wa.me/5519982554950" target="_blank" rel="noopener">Fale conosco ↗</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div class="reveal"><div class="eyebrow">Sabor, variedade e praticidade</div><h1>Tudo para deixar seu dia <span style="color:#b58a36">mais gostoso.</span></h1>
+<p>Conheça a Frios Brasil: uma opção em Hortolândia para encontrar frios, queijos, carnes, laticínios e produtos para sua casa ou seu negócio.</p>
+<div class="hero-actions"><a class="btn" href="#catalogo">Explorar catálogo <span>→</span></a><a class="btn outline" href="https://wa.me/5519982554950?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a></div>
+<div class="hero-note"><span>✓ Atendimento próximo</span><span>✓ Consulte disponibilidade</span></div></div>
+<div class="hero-visual reveal delay"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=1100&q=85" alt="Seleção de queijos e frios" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#dce9dc,#a7c1a9)'"><div class="photo-label">Frios Brasil <small style="display:block;font-weight:500;color:#68756d">Hortolândia · SP</small></div></div><div class="floating">❄️ Variedade para você</div></div>
+</div></section>
+<div class="strip"><div class="wrap"><div class="strip-item"><span class="strip-icon">🧀</span><div><b>Frios e queijos</b><small>Opções para o dia a dia</small></div></div><div class="strip-item"><span class="strip-icon">🥓</span><div><b>Carnes e embutidos</b><small>Consulte os cortes disponíveis</small></div></div><div class="strip-item"><span class="strip-icon">🛒</span><div><b>Para casa ou comércio</b><small>Consulte condições de compra</small></div></div></div></div>
+
+<section id="categorias"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Encontre o que procura</div><h2>Um catálogo para<br>facilitar sua escolha.</h2></div><p>Explore as categorias e fale com a equipe para confirmar marcas, tamanhos, preços e disponibilidade.</p></div>
+<div class="categories">
+<a class="cat" href="#catalogo" onclick="setFilter('Frios e queijos')"><div class="emoji">🧀</div><h3>Frios e queijos</h3><p>Queijos, presunto e outros frios</p></a>
+<a class="cat" href="#catalogo" onclick="setFilter('Embutidos')"><div class="emoji">🥓</div><h3>Embutidos</h3><p>Salames, linguiças e defumados</p></a>
+<a class="cat" href="#catalogo" onclick="setFilter('Carnes e frangos')"><div class="emoji">🍗</div><h3>Carnes e frangos</h3><p>Consulte os cortes disponíveis</p></a>
+<a class="cat" href="#catalogo" onclick="setFilter('Laticínios')"><div class="emoji">🥛</div><h3>Laticínios</h3><p>Produtos para receitas e refeições</p></a>
+<a class="cat" href="#catalogo" onclick="setFilter('Mercearia')"><div class="emoji">🫒</div><h3>Mercearia</h3><p>Conservas e itens variados</p></a>
+</div></div></section>
+
+<section class="catalog" id="catalogo"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Conheça as opções</div><h2>Catálogo de produtos</h2></div><p>Os itens abaixo são exemplos de categorias e produtos para apresentar a loja. Consulte a equipe para confirmar o estoque e os valores atualizados.</p></div>
+<div class="tools"><input class="search" id="search" type="search" placeholder="🔎  Buscar produto..." aria-label="Buscar produto" oninput="renderProducts()"><div class="filters" id="filters"><button class="filter active" onclick="setFilter('Todos')">Todos</button><button class="filter" onclick="setFilter('Frios e queijos')">Frios e queijos</button><button class="filter" onclick="setFilter('Embutidos')">Embutidos</button><button class="filter" onclick="setFilter('Carnes e frangos')">Carnes e frangos</button><button class="filter" onclick="setFilter('Laticínios')">Laticínios</button><button class="filter" onclick="setFilter('Mercearia')">Mercearia</button></div></div>
+<div class="products" id="products"></div><p class="notice">* Catálogo demonstrativo, não representa confirmação de estoque, marcas, preços ou ranking de vendas. Peça a lista atualizada pelo WhatsApp.</p>
+</div></section>
+
+<section id="empresa"><div class="wrap about-grid"><div class="about-card"><div class="eyebrow">Sobre a Frios Brasil</div><h3>Uma loja para encontrar variedade e praticidade.</h3><p>A Frios Brasil está localizada no Jardim Everest, em Hortolândia. Entre em contato para saber mais sobre os produtos, condições de compra e atendimento.</p><div class="checklist"><div class="check"><i>✓</i><span>Consulte opções para sua casa ou seu comércio.</span></div><div class="check"><i>✓</i><span>Confirme preços, pesos e disponibilidade diretamente com a loja.</span></div><div class="check"><i>✓</i><span>Fale com a equipe sem sair do site.</span></div></div><a class="btn" style="margin-top:24px" href="https://wa.me/5519982554950" target="_blank" rel="noopener">Conversar com a loja ↗</a></div>
+<div class="about-img"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=85" alt="Alimentos frescos em mercado" loading="lazy"></div></div></section>
+
+<section class="faq" id="duvidas"><div class="wrap"><div class="section-head" style="justify-content:center;text-align:center"><div><div class="eyebrow" style="justify-content:center">Central de ajuda</div><h2>Dúvidas frequentes</h2><p style="margin:auto">Não encontrou sua resposta? Chame a equipe pelo WhatsApp.</p></div></div>
+<div class="faq-list">
+<details><summary>Como consulto os preços dos produtos?</summary><p>Os preços podem variar conforme produto, marca, peso e disponibilidade. Solicite a cotação atualizada pelo WhatsApp.</p></details>
+<details><summary>Os produtos do catálogo estão todos disponíveis?</summary><p>O catálogo é demonstrativo. Confirme com a loja quais itens estão disponíveis no momento.</p></details>
+<details><summary>A loja vende no atacado e no varejo?</summary><p>Consulte diretamente a equipe para confirmar as condições, quantidades mínimas e preços para compras em maior volume.</p></details>
+<details><summary>Vocês fazem entregas?</summary><p>Entre em contato para confirmar se há entrega, bairros atendidos, disponibilidade e possíveis taxas.</p></details>
+<details><summary>Quais formas de pagamento são aceitas?</summary><p>Fale com a equipe para confirmar as formas de pagamento aceitas atualmente.</p></details>
+<details><summary>Como faço um pedido?</summary><p>Use o botão de WhatsApp, informe os produtos e quantidades desejadas e aguarde a confirmação da equipe.</p></details>
+</div></div></section>
+
+<section id="contato"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Estamos por aqui</div><h2>Fale com a Frios Brasil.</h2></div><p>Quer consultar um produto, tirar uma dúvida ou saber como chegar? Escolha o canal que preferir.</p></div>
+<div class="contact-grid"><div class="contact-card"><h3>Vamos conversar?</h3><p>Entre em contato com a loja. A equipe poderá orientar sobre produtos, preços e disponibilidade.</p>
+<div class="contact-line"><span>📍</span><div><strong>Endereço</strong><small>Rua Pico do Cruzeiro, 223 – Jardim Everest<br>Hortolândia – SP</small></div></div>
+<div class="contact-line"><span>📞</span><div><strong>Telefone / WhatsApp informado</strong><small>(19) 98255-4950</small></div></div>
+<div class="contact-line"><span>📷</span><div><strong>Instagram</strong><small>@friosbrasil_hortolandia</small></div></div>
+<div class="contact-line"><span>🕒</span><div><strong>Horário divulgado anteriormente</strong><small>Segunda a sábado: 08h30–18h30<br>Domingo: 08h30–13h<br><em>Confirme os horários antes de visitar.</em></small></div></div>
+<a class="btn light" href="https://wa.me/5519982554950" target="_blank" rel="noopener">Abrir WhatsApp ↗</a> <a class="btn light" href="https://www.instagram.com/friosbrasil_hortolandia/" target="_blank" rel="noopener">Instagram ↗</a>
+</div>
+<div class="form-card"><h3>Envie sua dúvida</h3><form id="contactForm"><div class="field"><label for="name">Seu nome</label><input id="name" required placeholder="Como podemos chamar você?"></div><div class="field"><label for="subject">Assunto</label><select id="subject"><option>Informações sobre produtos</option><option>Consultar preços</option><option>Atacado</option><option>Entrega</option><option>Outra dúvida</option></select></div><div class="field"><label for="message">Sua mensagem</label><textarea id="message" required placeholder="Escreva sua dúvida ou os produtos que procura..."></textarea></div><button class="btn" type="submit">Enviar pelo WhatsApp ↗</button><p class="notice">Ao enviar, o WhatsApp será aberto com sua mensagem pronta. Nenhum dado é armazenado neste site.</p></form></div></div></div></section>
+</main>
+<footer><div class="wrap"><div class="footer-row"><a class="brand" href="#inicio"><span class="logo">❄</span><span class="footer-brand">FRIOS BRASIL</span></a><div class="footer-links"><a href="#catalogo">Catálogo</a><a href="#duvidas">Dúvidas</a><a href="https://www.instagram.com/friosbrasil_hortolandia/" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/5519982554950" target="_blank" rel="noopener">WhatsApp</a></div></div><div class="copyright">© <span id="year"></span> Frios Brasil · Hortolândia – SP. Informações comerciais e catálogo sujeitos à confirmação pela loja.</div></div></footer>
+<a class="whatsapp-float" href="https://wa.me/5519982554950?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Frios%20Brasil." target="_blank" rel="noopener" aria-label="Fale pelo WhatsApp">☘ <span>WhatsApp</span></a>
+
+<script src="script.js" defer></script>
+</body></html>
